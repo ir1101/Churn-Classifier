@@ -1,0 +1,4 @@
+model,label,cv_pr_auc_mean,cv_pr_auc_std,cv_roc_auc_mean,cv_roc_auc_std,cv_brier_mean,selected,best_params
+logistic_regression,Logistic regression,0.6635,0.0132,0.8463,0.0115,0.1348,no,C=0.3
+random_forest,Random forest,0.6656,0.0184,0.8479,0.0099,0.1345,no,"max_features=sqrt, min_samples_leaf=20"
+xgboost,XGBoost,0.6717,0.0216,0.85,0.0108,0.1335,yes,"subsample=0.7, reg_lambda=3.0, n_estimators=200, min_child_weight=1, max_depth=4, learning_rate=0.02, colsample_bytree=0.8"

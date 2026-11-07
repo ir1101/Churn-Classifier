@@ -1,0 +1,23 @@
+metric,value,description
+customers,7043.0,Customers in the dataset
+churners,1869.0,Customers who churned
+churn_rate,0.2654,Share of customers who churned
+train_customers,5634.0,Customers used for training
+test_customers,1409.0,Customers held out for the final test
+threshold,0.345,Probability cutoff for flagging a customer
+roc_auc,0.8486,Test ROC-AUC
+pr_auc,0.6639,Test PR-AUC (average precision)
+precision,0.5687,Share of flagged test customers who churned
+recall,0.7193,Share of test churners who were flagged
+f1,0.6352,F1 score at the cutoff
+accuracy,0.7807,Accuracy at the cutoff
+baseline_accuracy,0.7346,Accuracy of always predicting no churn
+brier,0.1345,Brier score (lower is better)
+flagged_share,0.3357,Share of test customers flagged
+true_negatives,831.0,Stayed and not flagged
+false_positives,204.0,Stayed but flagged (false alarm)
+false_negatives,105.0,Churned but not flagged (missed)
+true_positives,269.0,Churned and flagged (caught)
+captured_top_10pct,0.2858,Churners caught by contacting the riskiest 10%
+captured_top_20pct,0.5102,Churners caught by contacting the riskiest 20%
+captured_top_30pct,0.6631,Churners caught by contacting the riskiest 30%

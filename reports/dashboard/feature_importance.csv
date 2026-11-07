@@ -1,0 +1,19 @@
+feature,label,importance_mean,importance_std
+tenure,Tenure (months),0.1393,0.0115
+Contract,Contract,0.1079,0.0063
+TechSupport,Tech support,0.0223,0.0046
+OnlineSecurity,Online security,0.0208,0.0062
+InternetService,Internet service,0.0155,0.0102
+TotalCharges,Total charges,0.0151,0.005
+PaperlessBilling,Paperless billing,0.0061,0.0087
+PaymentMethod,Payment method,0.0059,0.0035
+OnlineBackup,Online backup,0.0027,0.0026
+MonthlyCharges,Monthly charges,0.0021,0.0051
+MultipleLines,Multiple lines,0.0016,0.0064
+SeniorCitizen,Senior citizen,0.0014,0.0011
+PhoneService,Phone service,0.0011,0.0004
+Dependents,Has dependents,0.0003,0.0024
+StreamingMovies,Streaming movies,0.0001,0.0008
+StreamingTV,Streaming TV,-0.0002,0.0009
+Partner,Has partner,-0.0003,0.0002
+DeviceProtection,Device protection,-0.0005,0.0003

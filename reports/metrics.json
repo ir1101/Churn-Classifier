@@ -1,0 +1,139 @@
+{
+  "model_name": "xgboost",
+  "model_label": "XGBoost",
+  "best_params": {
+    "subsample": 0.7,
+    "reg_lambda": 3.0,
+    "n_estimators": 200,
+    "min_child_weight": 1,
+    "max_depth": 4,
+    "learning_rate": 0.02,
+    "colsample_bytree": 0.8
+  },
+  "selection_reason": "Highest cross-validated PR-AUC.",
+  "threshold": 0.345,
+  "threshold_rule": "Maximizes F1 on out-of-fold predictions for the training set",
+  "oof_f1": 0.635626314208471,
+  "cv_folds": 5,
+  "cv": [
+    {
+      "model": "logistic_regression",
+      "label": "Logistic regression",
+      "cv_pr_auc_mean": 0.6635000458774074,
+      "cv_pr_auc_std": 0.013228373565671515,
+      "cv_roc_auc_mean": 0.8462968700263636,
+      "cv_roc_auc_std": 0.011525851990256483,
+      "cv_brier_mean": 0.13475843341258525,
+      "cv_log_loss_mean": 0.4152555663508819,
+      "best_params": {
+        "C": 0.3
+      },
+      "settings_tried": 7,
+      "search_seconds": 12.1,
+      "selected": false
+    },
+    {
+      "model": "random_forest",
+      "label": "Random forest",
+      "cv_pr_auc_mean": 0.6656125027871729,
+      "cv_pr_auc_std": 0.018400508955045435,
+      "cv_roc_auc_mean": 0.8479312119204984,
+      "cv_roc_auc_std": 0.009868018626090257,
+      "cv_brier_mean": 0.13448635686712154,
+      "cv_log_loss_mean": 0.41470046315649445,
+      "best_params": {
+        "max_features": "sqrt",
+        "min_samples_leaf": 20
+      },
+      "settings_tried": 6,
+      "search_seconds": 6.9,
+      "selected": false
+    },
+    {
+      "model": "xgboost",
+      "label": "XGBoost",
+      "cv_pr_auc_mean": 0.6716696078883039,
+      "cv_pr_auc_std": 0.021631361611209175,
+      "cv_roc_auc_mean": 0.8500030829036757,
+      "cv_roc_auc_std": 0.01083262388656461,
+      "cv_brier_mean": 0.1334715574979782,
+      "cv_log_loss_mean": 0.4115362788338735,
+      "best_params": {
+        "subsample": 0.7,
+        "reg_lambda": 3.0,
+        "n_estimators": 200,
+        "min_child_weight": 1,
+        "max_depth": 4,
+        "learning_rate": 0.02,
+        "colsample_bytree": 0.8
+      },
+      "settings_tried": 25,
+      "search_seconds": 14.2,
+      "selected": true
+    }
+  ],
+  "test_metrics": {
+    "roc_auc": 0.8485868919372757,
+    "pr_auc": 0.6639397773349116,
+    "brier": 0.1344717074857005,
+    "log_loss": 0.41299479371905656,
+    "accuracy": 0.7806955287437899,
+    "precision": 0.5687103594080338,
+    "recall": 0.7192513368983957,
+    "f1": 0.6351829988193625,
+    "threshold": 0.345,
+    "flagged_share": 0.3356990773598297,
+    "tp": 269,
+    "fp": 204,
+    "tn": 831,
+    "fn": 105,
+    "n": 1409,
+    "churn_rate": 0.2654364797728886,
+    "baseline_accuracy": 0.7345635202271115
+  },
+  "gains": {
+    "top_10pct": 0.2858288770053476,
+    "top_20pct": 0.5101604278074867,
+    "top_30pct": 0.6631016042780749
+  },
+  "dataset": {
+    "source": "https://raw.githubusercontent.com/IBM/telco-customer-churn-on-icp4d/master/data/Telco-Customer-Churn.csv",
+    "customers": 7043,
+    "churners": 1869,
+    "churn_rate": 0.2653698707936959,
+    "train_customers": 5634,
+    "test_customers": 1409
+  },
+  "required_columns": [
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "tenure",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod",
+    "MonthlyCharges",
+    "TotalCharges"
+  ],
+  "excluded_columns": [
+    "gender"
+  ],
+  "quick_mode": false,
+  "trained_at": "2026-11-07T15:09:41+00:00",
+  "versions": {
+    "python": "3.13.0",
+    "scikit-learn": "1.8.0",
+    "xgboost": "3.2.0",
+    "pandas": "3.0.3",
+    "numpy": "2.1.3"
+  }
+}
